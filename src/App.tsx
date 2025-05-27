@@ -1,23 +1,29 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Home } from './Pages/Home';
+import { Search } from './Pages/Search';
+import { Navbar } from './Parts/Navigation';
+import { Footer } from './Parts/Footer';
+import './App.css';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+/**
+ * Главный компонент приложения, который отображает навигационную панель, сайт и футер.
+ */
 
-// export default App;
+const App: React.FC = () => {
+  return (
+    <Router>
+      <div className="app">
+        <Navbar />
+        <main className="app-main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/search" element={<Search />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
+export default App;

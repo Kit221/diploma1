@@ -1,0 +1,30 @@
+.trackCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.trackCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.trackCardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.trackCardTitle {
+  font-size: 16px;
+  margin: 15px 15px 5px;
+  color: #000000;
+  font-weight: 600;
+}
+
+.trackCardArtist {
+  font-size: 14px;
+  margin: 0 15px 15px;
+  color: #777777;
+}
